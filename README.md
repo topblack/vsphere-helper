@@ -17,5 +17,5 @@ python exportovf.py -s <yourvsphere.com> -u <username> -p <password> -n <name-of
 ## Running with Docker
 
 ```bash
-docker run -e USE_S3_BUCKET=<your-bucket-name> -e AWS_ACCESS_KEY_ID=<accessKeyId> -e AWS_SECRET_ACCESS_KEY=<accessKey> qinling/vsphere-helper exportovf.py -s <yourvsphere.com> -u <username> -p <password> -n <name-of-vm>
+docker run --privileged -e USE_S3_BUCKET=<your-bucket-name> -e AWS_ACCESS_KEY_ID=<accessKeyId> -e AWS_SECRET_ACCESS_KEY=<accessKey> qinling/vsphere-helper exportovf.py -s <yourvsphere.com> -u <username> -p <password> -n <name-of-vm>
 ```
