@@ -11,11 +11,11 @@ When running inside the docker, a S3 bucket can be used to transfer the files be
 
 ```bash
 pip install -r requirements.py
-python export2ovf.py -s <yourvsphere.com> -u <username> -p <password> -n <name-of-vm> -w <outputDir>
+python exportovf.py -s <yourvsphere.com> -u <username> -p <password> -n <name-of-vm> -w <outputDir>
 ```
 
 ## Running with Docker
 
 ```bash
-docker run -e USE_S3_BUCKET=<your-bucket-name> -e AWS_ACCESS_KEY_ID=<accessKeyId> -e AWS_SECRET_ACCESS_KEY=<accessKey> qinling/vsphere-helper export2ovf.py -s <yourvsphere.com> -u <username> -p <password> -n <name-of-vm>
+docker run -e USE_S3_BUCKET=<your-bucket-name> -e AWS_ACCESS_KEY_ID=<accessKeyId> -e AWS_SECRET_ACCESS_KEY=<accessKey> qinling/vsphere-helper exportovf.py -s <yourvsphere.com> -u <username> -p <password> -n <name-of-vm>
 ```
