@@ -304,7 +304,8 @@ def export_vm(si, uuid, workdir):
             http_nfc_lease.HttpNfcLeaseComplete()
             # stopping thread
             lease_updater.stop()
-    except ex:
+    except Exception as ex:
+        print(ex)
         # Complete lease upon exception
         http_nfc_lease.HttpNfcLeaseComplete()
         raise ex
