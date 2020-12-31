@@ -142,8 +142,8 @@ class LeaseProgressUpdater(threading.Thread):
                       'Progress to {}%'.format(self.progressPercent))
                 self.httpNfcLease.HttpNfcLeaseProgress(self.progressPercent)
                 sleep(self.updateInterval)
-            except ex:
-                print(ex.message)
+            except Exception as ex:
+                print(ex)
                 return
 
 
